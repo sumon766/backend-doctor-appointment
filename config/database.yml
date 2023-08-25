@@ -23,6 +23,10 @@ default: &default
 
 development:
   <<: *default
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: elham@123
   database: backend_doctor_appointment_development
 
   # The specified database role being used to connect to postgres.
@@ -57,6 +61,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: elham@123
   database: backend_doctor_appointment_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -82,5 +90,5 @@ test:
 production:
   <<: *default
   database: backend_doctor_appointment_production
-  username: backend_doctor_appointment
+  username: postgres
   password: <%= ENV["BACKEND_DOCTOR_APPOINTMENT_DATABASE_PASSWORD"] %>

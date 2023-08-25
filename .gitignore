@@ -29,3 +29,5 @@
 /config/master.key
 # .gitignore
 node_modules/
+# Igonre the database.yml file
+/config/database.yml
