@@ -1,4 +1,3 @@
 class Appointment < ApplicationRecord
-    validates :date, :city, presence: true
-  end
-  
+  validates :date, :city, presence: true
+end
