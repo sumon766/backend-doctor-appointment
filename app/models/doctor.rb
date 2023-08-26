@@ -4,4 +4,7 @@ class Doctor < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :photo, presence: true
+
+  has_many :appointments
+  
 end
