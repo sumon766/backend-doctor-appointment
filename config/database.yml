@@ -26,7 +26,8 @@ development:
   adapter: postgresql
   host: localhost
   username: postgres
-  password: elham@123
+  # password: elham@123
+  password: password
   database: backend_doctor_appointment_development
 
   # The specified database role being used to connect to postgres.
@@ -64,7 +65,8 @@ test:
   adapter: postgresql
   host: localhost
   username: postgres
-  password: elham@123
+  # password: elham@123
+  password: password
   database: backend_doctor_appointment_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
