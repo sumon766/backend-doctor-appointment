@@ -13,7 +13,7 @@ class Api::V1::AppointmentsController < ApplicationController
 
   def create
          @appointment = Appointment.new(appointment_params)
-          @appointment.user_id = current_user.id
+           @appointment.user_id = current_user.id
           @appointment.doctor_id = Doctor.pluck(:id).sample
     if @appointment.save
       render json: { message: 'Appointment created successfully' }, status: :created
