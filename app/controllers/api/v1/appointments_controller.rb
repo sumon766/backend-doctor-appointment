@@ -2,7 +2,6 @@ class Api::V1::AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[show update destroy]
 
   def index
-    
     @appointments = Appointment.all
     render json: @appointments
   end
@@ -12,9 +11,9 @@ class Api::V1::AppointmentsController < ApplicationController
   end
 
   def create
-         @appointment = Appointment.new(appointment_params)
-           @appointment.user_id = current_user.id
-          @appointment.doctor_id = Doctor.pluck(:id).sample
+    @appointment = Appointment.new(appointment_params)
+    @appointment.user_id = current_user.id
+    @appointment.doctor_id = Doctor.pluck(:id).sample
     if @appointment.save
       render json: { message: 'Appointment created successfully' }, status: :created
     else
