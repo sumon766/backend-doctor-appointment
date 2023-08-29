@@ -2,6 +2,7 @@ class Api::V1::AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[show update destroy]
 
   def index
+    
     @appointments = Appointment.all
     render json: @appointments
   end
