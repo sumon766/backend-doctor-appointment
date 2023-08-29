@@ -7,7 +7,7 @@ class Doctor < ApplicationRecord
 
   # def acceptable_image
   #   return unless main_image.attached?
-  
+
   #   unless main_image.blob.byte_size <= 1.megabyte
   #     errors.add(:main_image, "is too big")
   #   end
