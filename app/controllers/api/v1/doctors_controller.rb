@@ -3,9 +3,9 @@ class Api::V1::DoctorsController < ApplicationController
 
   # GET /doctors
   def index
-    @doctors = Doctor.all
+    @doctors = Doctor.all.joins(:photo_attachment)
 
-    render json: @doctors
+    render json: @doctors.map { |doctor| doctor.as_json.merge({ photo_url: url_for(doctor.photo) }) }
   end
 
   # GET /doctors/1
@@ -18,7 +18,7 @@ class Api::V1::DoctorsController < ApplicationController
     @doctor = Doctor.new(doctor_params)
 
     if @doctor.save
-      render json: @doctor, status: :created, location: @doctor
+      render json: @doctor, status: :created, location: root_path
     else
       render json: @doctor.errors, status: :unprocessable_entity
     end
