@@ -10,10 +10,9 @@ gem 'rails', '~> 7.0.7'
 gem 'pg', '~> 1.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'devise'
+
 gem 'puma', '~> 5.0'
 # Gemfile
-gem 'rack-cors'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -32,12 +31,11 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
-
+gem 'rack-cors'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
 # gem 'rubocop'
 gem 'rubocop', '>= 1.0', '< 2.0'
 group :development, :test do
@@ -49,3 +47,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+gem 'devise'
+gem 'devise-jwt'
+gem 'dotenv-rails', groups: %i[development test]

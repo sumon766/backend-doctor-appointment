@@ -27,13 +27,13 @@ development:
   host: localhost
   username: hope
   password: thegreatman
-  database: caps_api_development
+  database: caspstone_apiv1_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: backend_doctor_appointment
+  #username: caspstone_apiv1
 
   # The password associated with the postgres role (username).
   #password:
@@ -62,8 +62,10 @@ development:
 test:
   <<: *default
   adapter: postgresql
+  host: localhost
+  username: hope
   password: thegreatman
-  database: caps_api_test
+  database: caspstone_apiv1_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,7 +89,6 @@ test:
 #
 production:
   <<: *default
-  database: caps_api_production
+  database: caspstone_apiv1_production
   username: hope
-  password: thegreatman
-
+  password: <%= ENV["caspstone_apiv1_DATABASE_PASSWORD"] %>
