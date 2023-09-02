@@ -10,7 +10,7 @@ class Api::V1::DoctorsController < ApplicationController
 
   # GET /doctors/1
   def show
-    render json: @doctor
+    render json: @doctor.as_json.merge({ photo_url: url_for(@doctor.photo) })
   end
 
   # POST /doctors
