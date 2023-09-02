@@ -12,4 +12,12 @@ Rails.application.routes.draw do
       resources :doctors
     end
   end
+
+  authenticated :user do
+    resources :appointments
+  end
+  
 end
+
+
+

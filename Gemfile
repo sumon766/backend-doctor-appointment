@@ -10,7 +10,9 @@ gem 'rails', '~> 7.0.7'
 gem 'pg', '~> 1.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
+
 gem 'puma', '~> 5.0'
+# Gemfile
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
