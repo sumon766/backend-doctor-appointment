@@ -13,9 +13,11 @@ Rails.application.routes.draw do
     end
   end
 
-  authenticated :user do
+  namespace :api do
+    namespace :v1 do
     resources :appointments
   end
+end
   
 end
 

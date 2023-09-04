@@ -1,4 +1,6 @@
-class AppointmentsController < ApplicationController
+module Api
+  module V1
+    class Api::V1::AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[show update destroy]
 
   def index
@@ -12,8 +14,7 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.new(appointment_params)
-    @appointment.user_id = current_user.id
-    @appointment.doctor_id = Doctor.pluck(:id).sample
+              @appointment.user_id = current_user.id
     if @appointment.save
       render json: { message: 'Appointment created successfully' }, status: :created
     else
@@ -40,6 +41,8 @@ class AppointmentsController < ApplicationController
   end
 
   def appointment_params
-    params.require(:appointment).permit(:date, :city)
+    params.require(:appointment).permit(:date, :city,:doctor_id)
   end
+end
+end
 end
