@@ -25,9 +25,9 @@ development:
   <<: *default
   adapter: postgresql
   host: localhost
-  username: hope
-  password: thegreatman
-  database: caspstone_apiv1_development
+  username: sumon
+  password: 1122
+  database: backend_doctor_appointment_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -63,9 +63,9 @@ test:
   <<: *default
   adapter: postgresql
   host: localhost
-  username: hope
-  password: thegreatman
-  database: caspstone_apiv1_test
+  username: sumon
+  password: 1122
+  database: backend_doctor_appointment_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -89,6 +89,6 @@ test:
 #
 production:
   <<: *default
-  database: caspstone_apiv1_production
-  username: hope
-  password: <%= ENV["caspstone_apiv1_DATABASE_PASSWORD"] %>
+  database: backend_doctor_appointment_production
+  username: sumon
+  password: <%= ENV["BACKEND_DOCTOR_APPOINTMENT_DATABASE_PASSWORD"] %>
