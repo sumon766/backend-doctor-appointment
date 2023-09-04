@@ -4,7 +4,7 @@ class Doctor < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   has_one_attached :photo
-
+  has_many :appointment,dependent: :destroy
   # def acceptable_image
   #   return unless main_image.attached?
 
