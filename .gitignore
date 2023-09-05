@@ -32,3 +32,4 @@
 node_modules/
 # Igonre the database.yml file
 /config/database.yml
+config/database.yml
