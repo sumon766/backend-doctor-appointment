@@ -40,7 +40,7 @@ module Api
       end
 
       def appointment_params
-        params.require(:appointment).permit(:date, :city, :doctor_id,:user_id)
+        params.require(:appointment).permit(:date, :city, :doctor_id, :user_id)
       end
     end
   end
