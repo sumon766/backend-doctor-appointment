@@ -51,3 +51,7 @@ end
 gem 'devise'
 gem 'devise-jwt'
 gem 'dotenv-rails', groups: %i[development test]
+gem 'rspec-rails'
+
+gem 'rswag'
+gem 'rswag-ui'

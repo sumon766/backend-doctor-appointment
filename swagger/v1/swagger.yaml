@@ -1,0 +1,76 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/doctors":
+    post:
+      summary: Creates a doctor
+      tags:
+      - Doctors
+      parameters: []
+      responses:
+        '201':
+          description: doctor created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+              required:
+              - name
+              - description
+    get:
+      summary: Lists all doctors
+      tags:
+      - Doctors
+      responses:
+        '200':
+          description: doctors found
+  "/api/v1/doctors/{id}":
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    put:
+      summary: Updates a doctor
+      tags:
+      - Doctors
+      parameters: []
+      responses:
+        '200':
+          description: doctor updated
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+    delete:
+      summary: Deletes a doctor
+      tags:
+      - Doctors
+      responses:
+        '204':
+          description: doctor deleted
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
