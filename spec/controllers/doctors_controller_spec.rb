@@ -35,7 +35,7 @@ RSpec.describe Api::V1::DoctorsController, type: :controller do
     it 'creates a new doctor' do
       doctor_params = { name: 'Dr. Smith', description: 'Lorem ipsum' }
       post :create, params: { doctor: doctor_params }
-      
+
       expect(response).to have_http_status(201)
       expect(Doctor.last.name).to eq('Dr. Smith')
     end
@@ -43,7 +43,7 @@ RSpec.describe Api::V1::DoctorsController, type: :controller do
     it 'returns JSON with the created doctor' do
       doctor_params = { name: 'Dr. Smith', description: 'Lorem ipsum' }
       post :create, params: { doctor: doctor_params }
-      
+
       expect(response).to have_http_status(201)
       parsed_response = JSON.parse(response.body)
       expect(parsed_response['name']).to eq('Dr. Smith')
@@ -66,7 +66,7 @@ RSpec.describe Api::V1::DoctorsController, type: :controller do
     it 'updates a doctor' do
       updated_params = { name: 'Dr. Updated', description: 'Updated description' }
       put :update, params: { id: doctor.id, doctor: updated_params }
-      
+
       expect(response).to have_http_status(200)
       expect(doctor.reload.name).to eq('Dr. Updated')
     end
@@ -75,7 +75,7 @@ RSpec.describe Api::V1::DoctorsController, type: :controller do
       it 'does not update the doctor' do
         invalid_params = { name: '' }
         put :update, params: { id: doctor.id, doctor: invalid_params }
-        
+
         expect(response).to have_http_status(422)
         expect(doctor.reload.name).to eq('Dr. Original')
       end
@@ -87,7 +87,7 @@ RSpec.describe Api::V1::DoctorsController, type: :controller do
 
     it 'deletes a doctor' do
       delete :destroy, params: { id: doctor.id }
-      
+
       expect(response).to have_http_status(204)
       expect { doctor.reload }.to raise_error(ActiveRecord::RecordNotFound)
     end

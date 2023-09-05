@@ -7,7 +7,7 @@ class Users::SessionsController < Devise::SessionsController
     if user&.valid_password?(params[:user][:password])
       sign_in user
       # respond_with user, status: :ok
-      render json:{
+      render json: {
         status: {
           code: 200
         },
