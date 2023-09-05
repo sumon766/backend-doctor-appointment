@@ -14,7 +14,6 @@ module Api
 
       def create
         @appointment = Appointment.new(appointment_params)
-        @appointment.user_id = current_user.id
         if @appointment.save
           render json: { message: 'Appointment created successfully' }, status: :created
         else
@@ -41,7 +40,7 @@ module Api
       end
 
       def appointment_params
-        params.require(:appointment).permit(:date, :city, :doctor_id)
+        params.require(:appointment).permit(:date, :city, :doctor_id,:user_id)
       end
     end
   end
