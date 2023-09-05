@@ -11,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
         status: {
           code: 200
         },
-        user: user
+        user:
       }
     else
       render json: {

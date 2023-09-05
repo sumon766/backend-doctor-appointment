@@ -11,7 +11,7 @@ describe 'Doctors API' do
           name: { type: :string },
           description: { type: :string }
         },
-        required: ['name', 'description']
+        required: %w[name description]
       }
 
       response '201', 'doctor created' do
