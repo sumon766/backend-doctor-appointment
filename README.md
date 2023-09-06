@@ -107,10 +107,19 @@ or
 ```
 ./bin/dev
 ```
+
+### Run tests
+
+To run tests, run the following command:
+
+
+Example command:
+
+```sh
+  rspec
+```
+-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 
 
 <!-- AUTHORS -->

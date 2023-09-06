@@ -35,7 +35,11 @@ class Api::V1::DoctorsController < ApplicationController
 
   # DELETE /doctors/1
   def destroy
-    @doctor.destroy
+    if @doctor.destroy
+      render json: { message: 'Doctor successfully destroyed' }, status: :ok
+    else
+      render json: { error: 'Failed to destroy the doctor' }, status: :unprocessable_entity
+    end
   end
 
   private
