@@ -1,7 +1,7 @@
 databases:
-  - name: doctor_appointment_production
-    databaseName: doctor_appointment_production
-    user: doctor_appointment_production_user
+  - name: doctor_appointment
+    databaseName: doctor_appointment
+    user: doctor_appointment_c1zb_user
 
 services:
   - type: web
@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: doctor_appointment_production
+          name: doctor_appointment
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
