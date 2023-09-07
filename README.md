@@ -8,6 +8,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [No. of Member](#member-group)
+    - [Kanban-Board](#kanban-board)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -56,9 +58,21 @@ Backend is implemented as API-only. The front end is implemented utilizing the R
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Number of Members <a id="member-group"></a>
+In this final capstone, a team of four(4) people has participated in bringing the requirement to life
 
+- Abdi @Lul-Abdifan 
+- Elham @Elhambasir 
+- MD Mursedul @sumon766  
+- James @serengia 
 
-<!-- GETTING STARTED -->
+### Kanban -Board <a id="kanban-board"></a>
+- [Kanban Board Link](https://github.com/users/sumon766/projects/4)
+- Initial Kanban Board
+![backend-kanaban-board](https://github.com/sumon766/backend-doctor-appointment/assets/108110651/9cce623d-31bb-4bec-9362-ea78bc77001c)
+- Final Kanban Board
+  ![Screenshot from 2023-09-07 06-33-30](https://github.com/sumon766/backend-doctor-appointment/assets/86189460/26709c94-4d65-42ec-98c2-3ccc9ea2234e)
+- [Latest Backened](https://github.com/sumon766/backend-doctor-appointment/tree/main)
 
 ## 💻 Getting Started <a id="getting-started"></a>
 
